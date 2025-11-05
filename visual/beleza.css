@@ -1,0 +1,32 @@
+body{
+    height: 100vh; 
+    background-image: linear-gradient(to bottom, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #d0d0d0);
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    color: #4B3E3E;
+}
+h1, h2, h3, h4, h5{
+    font-family: "m";
+}
+p{
+    font-family: "j";
+}
+.corpo{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+@font-face{
+    font-family: "m";
+    src: url('fontes/Marcellus/Marcellus-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: "j";
+    src: url('fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
