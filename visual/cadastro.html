@@ -4,9 +4,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BareBeauty - Cadastre-se</title>
-        <link rel="stylesheet" href="beleza.css">
+        <style>
+            .quadradoCadastro{
+                text-align: center;
+                margin-top: 13%;
+                margin-left: 55%;   
+                margin-right: 19%;
+                margin-bottom: 10%;
+                padding: 1%;
+                border-radius: 15px;
+                background-color: #E3CBFF;
+            }
+            label{
+                display: block;
+                margin-bottom: px;
+                margin-top: 25px;
+            }
+            button{
+                margin-bottom: 34px;
+                margin-top: 25px;
+            }
+            body{
+                background-image: url("imagens/imagemCadastro.jpg"); 
+                background-size: cover;
+            }
+            @font-face{
+                font-family: "m";
+                src: url('fontes/Marcellus/Marcellus-Regular.ttf') format('truetype');
+            }
+            @font-face{
+                font-family: "j";
+                src: url('fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+            }
+        </style>
     </head>
     <body>
-        
+
+
+        <div class="quadradoCadastro">
+            <form id="idCadastro">
+                <h1 style="color: #fafafa; font-size: 310%; font-family: m;">Cadastro</h1>
+                <label for="nomeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">nome de usuário:</label><br>
+                <input type="text" id="nomeUsuario" required><br>
+
+                <label for="senhaUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">senha:</label><br>
+                <input type="text" id="senhaUsuario" step="0.01" required><br>
+
+                <button type="submit" style="color: #522586; font-size: 130%; font-family: m;">cadastrar</button>
+        </div>
     </body>
 </html>
