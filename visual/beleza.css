@@ -8,8 +8,44 @@ body{
 h1, h2, h3, h4, h5{
     font-family: "m";
 }
+article{
+    display: flex;                /* ativa o flexbox */
+    margin-top: 0.010%;
+    justify-content: center;      /* centraliza horizontalmente */
+}
+nav{
+    display: flex;
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+input{
+    padding: 8px;
+    border: none;
+    outline: none;
+    width: 550px;
+    font-family: "j"
+}
+button{
+    background-color: #BAE2FF;
+    color: #4B3E3E;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 50px;
+    font-family: "j"
+}
 p{
     font-family: "j";
+}
+a{
+    font-family: "m";
+    font-size: 125%;
+    text-decoration: none;
+    color: #4B3E3E;
+}
+.letraOpcoes{
+    font-family: "j";
+    margin-top: 6%;
 }
 .corpo{
     margin-top: 1%;
@@ -29,10 +65,20 @@ p{
     background-color: #E3CBFF;
 
 }
+.menu{
+    margin-top: 6%;
+}
+.logoBareBeauty{
+    width: 100%; /* Define a largura como 50% do contêiner */
+    height: auto; /* Mantém a altura proporcional */
+    aspect-ratio: 16 / 9; /* Opcional: para manter a proporção se a imagem for um exemplo */
+}
 footer{
     width: 100%;
     position: fixed;
+    background-color: #FFEEBC;
     bottom: 0;
+    border-radius: 15px;
 }
 @font-face{
     font-family: "m";
