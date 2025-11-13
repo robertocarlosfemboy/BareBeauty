@@ -11,7 +11,8 @@ h1, h2, h3, h4, h5{
 article{
     display: flex;                /* ativa o flexbox */
     margin-top: 0.010%;
-    justify-content: center;      /* centraliza horizontalmente */
+    /*justify-content: 500%;       centraliza horizontalmente */
+    margin-left: 40%;
 }
 nav{
     display: flex;
@@ -27,7 +28,7 @@ input{
     font-family: "j"
 }
 button{
-    background-color: #BAE2FF;
+    background-color: #FFEEBC;
     color: #4B3E3E;
     border: none;
     padding: 8px 10px;
@@ -46,6 +47,11 @@ a{
 .letraOpcoes{
     font-family: "j";
     margin-top: 6%;
+}
+.letraRedesSociais{
+    font-family: "j";
+    margin-top: 6%;
+    margin-left: 6%;
 }
 .corpo{
     margin-top: 1%;
@@ -74,7 +80,7 @@ a{
     aspect-ratio: 16 / 9; /* Opcional: para manter a proporção se a imagem for um exemplo */
 }
 footer{
-    width: 100%;
+    width: 13%;
     position: fixed;
     background-color: #FFEEBC;
     bottom: 0;
