@@ -1,0 +1,96 @@
+body{
+    height: 100vh; 
+    background-image: linear-gradient(to bottom, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #d0d0d0);
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    color: #4B3E3E;
+}
+h1, h2, h3, h4, h5{
+    font-family: "m";
+}
+article{
+    display: flex;                /* ativa o flexbox */
+    margin-top: 0.010%;
+    /*justify-content: 500%;       centraliza horizontalmente */
+    margin-left: 37%;
+}
+nav{
+    display: flex;
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+input{
+    padding: 8px;
+    border: none;
+    outline: none;
+    width: 550px;
+    font-family: "j"
+}
+button{
+    background-color: #FFEEBC;
+    color: #4B3E3E;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 50px;
+    font-family: "j"
+}
+p{
+    font-family: "j";
+}
+a{
+    font-family: "m";
+    font-size: 125%;
+    text-decoration: none;
+    color: #4B3E3E;
+}
+.letraOpcoes{
+    font-family: "j";
+    margin-top: 6%;
+}
+.letraRedesSociais{
+    font-family: "j";
+    margin-top: 6%;
+    margin-left: 6%;
+}
+.corpo{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+.quadradoOpcoes{
+    text-align: top;
+    margin-left: 0%;
+    width: 14%;
+    position: fixed;
+    height: 69%;
+    top: 3%;
+    bottom: 0%;
+    border-radius: 15px;
+    background-color: #E3CBFF;
+
+}
+.menu{
+    margin-top: 6%;
+}
+.logoBareBeauty{
+    width: 100%; /* Define a largura como 50% do contêiner */
+    height: auto; /* Mantém a altura proporcional */
+    aspect-ratio: 16 / 9; /* Opcional: para manter a proporção se a imagem for um exemplo */
+}
+footer{
+    width: 14%;
+    position: fixed;
+    background-color: #FFEEBC;
+    bottom: 3%;
+    border-radius: 15px;
+}
+@font-face{
+    font-family: "m";
+    src: url('fontes/Marcellus/Marcellus-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: "j";
+    src: url('fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}

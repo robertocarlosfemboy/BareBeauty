@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BareBeauty - Perfil</title>
+        <link rel="stylesheet" href="beleza.css">
+        <style>
+            .quadradoPerfil{
+                text-align: center;
+                margin-top: 13%;
+                margin-left: 55%;   
+                margin-right: 19%;
+                padding: 1%;
+                border-radius: 15px;
+                background-color: #E3CBFF;
+            }
+            label{
+                display: block;
+                margin-bottom: px;
+                margin-top: 25px;
+            }
+            .botaoPerfil{
+                margin-bottom: 34px;
+                margin-top: 25px;
+            }
+            @font-face{
+                font-family: "m";
+                src: url('fontes/Marcellus/Marcellus-Regular.ttf') format('truetype');
+            }
+            @font-face{
+                font-family: "j";
+                src: url('fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+            }
+        </style>
+    </head>
+    <body>
+        <div class="corpo">
+            <header>
+                <img src="" alt="">
+            </header>
+            <article>
+                <nav>
+                    <input type="text" name="query" placeholder="Pesquise">
+                    <button>Buscar</button>
+                </nav>
+            </article>
+
+            <section class="quadradoPerfil">
+            <form id="idPerfil">
+                <h1 style="color: #fafafa; font-size: 310%; font-family: m;">Perfil</h1>
+                <label for="nomeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">nome:</label><br>
+                <input type="text" id="nomeUsuario" required><br>
+
+                <label for="emailUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">e-mail:</label><br>
+                <input type="text" id="emailUsuario" step="0.01" required><br>
+
+                <label for="idadeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">idade:</label><br>
+                <input type="text" id="idadeUsuario" step="0.01" required><br>
+
+                <label for="idadeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">idade:</label><br>
+                <input type="text" id="idadeUsuario" step="0.01" required><br>
+
+                <button class="botaoPerfil" type="submit" style="color: #522586; font-size: 130%; font-family: m;">salvar</button>
+            </section>
+
+            <div class="quadradoOpcoes">
+                <div class="menu">
+                    <img src="imagens/BareBeauty.jpg" alt="logo BareBeauty" class="logoBareBeauty">
+                    <center><a href="pagina_inicial.html"><p class="letraOpcoes">Início</p></a>
+                    <a href="leitura.html"><p class="letraOpcoes">Leitura</p></a>
+                    <a href="planejamento.html"><p class="letraOpcoes">Planejamento</p></a>
+                    <a href="favoritos.html"><p class="letraOpcoes">Favoritos</p></a>
+                    <a href="perfil.html"><p class="letraOpcoes">Perfil</p></a></center>
+                </div>
+            </div>
+            <footer>
+                <p class="letraRedesSociais" style="font-size: 110%;">Siga nossas redes sociais: </p>
+                <p class="letraRedesSociais">
+                    <img src="imagens/instagram.jpg" alt="..."> @Barebeauty_ <br>
+                    <img src="imagens/pinterest.jpg" alt="..."> @Barebeauty_ <br>
+                    <img src="imagens/tiktok.jpg" alt="..."> @Barebeauty_ <br>
+                    <img src="imagens/youtube.jpg" alt="..."> Cuidados Bare Beauty <br>
+                    <img src="imagens/spotify.jpg" alt="..."> Bare Beauty <br>
+                    <img src="imagens/facebook.png" alt="..."> fb.com/barebeauty
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
+<!--
+
+html
+<div class="container-hover">
+    <img src="Imagens/33.jpg" alt="">
+    <div class="texto-oculto">
+        Mangá
+    </div>
+</div>
+
+css
+.container-hover {
+    position: relative; /* Importante para posicionar o texto oculto dentro */
+    display: inline-block; /* Para o contêiner se ajustar ao conteúdo */
+    padding: 10px;
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+.texto-oculto {
+    display: none; /* O texto fica oculto por padrão */
+    position: absolute; /* Posiciona o texto sobre o contêiner */
+    background-color: #60110f;
+    padding: 5px;
+}
+
+-->
