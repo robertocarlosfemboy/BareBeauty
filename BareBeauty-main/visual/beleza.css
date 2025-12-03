@@ -9,10 +9,12 @@ h1, h2, h3, h4, h5{
     font-family: "m";
 }
 article{
-    display: flex;                /* ativa o flexbox */
+    display: flex;
     margin-top: 0.010%;
-    /*justify-content: 500%;       centraliza horizontalmente */
     margin-left: 37%;
+    position: fixed;
+    
+
 }
 nav{
     display: flex;

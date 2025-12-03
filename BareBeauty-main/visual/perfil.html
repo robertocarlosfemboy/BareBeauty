@@ -8,19 +8,27 @@
         <style>
             .quadradoPerfil{
                 text-align: center;
-                margin-top: 13%;
-                margin-left: 55%;   
-                margin-right: 19%;
+                margin-top: 5%;
+                margin-left: 40%;   
+                margin-right: 31%;
                 padding: 1%;
                 border-radius: 15px;
                 background-color: #E3CBFF;
+            }
+            .inputDois{
+                padding: 8px;
+                width: 300px;
+                font-family: "j"
             }
             label{
                 display: block;
                 margin-bottom: px;
                 margin-top: 25px;
             }
-            .botaoPerfil{
+            .perfilBotao{
+                color: #4B3E3E;
+                border: none;
+                font-family: "m";
                 margin-bottom: 34px;
                 margin-top: 25px;
             }
@@ -49,19 +57,20 @@
             <section class="quadradoPerfil">
             <form id="idPerfil">
                 <h1 style="color: #fafafa; font-size: 310%; font-family: m;">Perfil</h1>
+                <img src="imagens/perfil.jpg" alt="...">
                 <label for="nomeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">nome:</label><br>
-                <input type="text" id="nomeUsuario" required><br>
+                <input class="inputDois" type="text" id="nomeUsuario" required><br>
+
+                <label for="idadeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">idade:</label><br>
+                <input class="inputDois" type="text" id="idadeUsuario" step="0.01" required><br>
+
+                <label for="nascimentoUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">data de nascimento:</label><br>
+                <input class="inputDois" type="text" id="nascimentoUsuario" step="0.01" required><br>
 
                 <label for="emailUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">e-mail:</label><br>
-                <input type="text" id="emailUsuario" step="0.01" required><br>
+                <input class="inputDois" type="text" id="emailUsuario" step="0.01" required><br> 
 
-                <label for="idadeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">idade:</label><br>
-                <input type="text" id="idadeUsuario" step="0.01" required><br>
-
-                <label for="idadeUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">idade:</label><br>
-                <input type="text" id="idadeUsuario" step="0.01" required><br>
-
-                <button class="botaoPerfil" type="submit" style="color: #522586; font-size: 130%; font-family: m;">salvar</button>
+                <button class="perfilBotao" type="submit" style="color: #4B3E3E; font-size: 160%;">salvar</button>
             </section>
 
             <div class="quadradoOpcoes">
