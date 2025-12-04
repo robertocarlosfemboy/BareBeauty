@@ -7,6 +7,13 @@
 // nomeUsuario varchar(30) not null,
 // senhaUsuario varchar(30) not null);
 
+//C:\Users\lucas\OneDrive\Desktop\APILogin> nodemon server.js
+
+//Dependências
+//npm init -y
+//npm install express mysql2 dotenv
+//npm install cors
+
 
 const cors = require('cors');
 
@@ -30,7 +37,7 @@ app.post('/loginUsuario', (req, res) => {
     return res.status(400).json({ error: 'Nome ou senha não inseridos.' });
   }
 
-  const sql = 'SELECT * FROM Memora WHERE nomeUsuario = ? AND SenhaUsuario = ?';
+  const sql = 'SELECT * FROM cadastro WHERE nomeUsuario = ? AND senhaUsuario = ?';
   db.query(sql, [nomeUsuario, senhaUsuario], (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
@@ -53,6 +60,25 @@ app.post('/loginUsuario', (req, res) => {
   });
 });
 
+app.post('/cadastrarUsuario', (req, res) => { 
+  const { nomeUsuario, senhaUsuario } = req.body;
+
+  if (!nomeUsuario || !senhaUsuario) {
+    return res.status(400).json({ error: 'Nome ou senha não inseridos.' });
+  }
+
+  const sql = 'INSERT INTO cadastro (nomeUsuario, senhaUsuario) VALUES (?, ?)';
+  db.query(sql, [nomeUsuario, senhaUsuario], (err, result) => {
+    if (err) {
+      if (err.code === 'ER_DUP_ENTRY') {
+        return res.status(409).json({ error: 'O usuário já está cadastrado' });
+      }
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.status(201).json({ message: 'Usuário registrado com sucesso'});
+  });
+});
 
 //Inicializa o servidor. Também deixar ingual.
 app.listen(PORT, () => {

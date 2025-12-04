@@ -22,34 +22,24 @@ const PORT = process.env.PORT || 3000;
 //Deixar ingual.
 
 
-//ROTA POST - login do Usuário.
-app.post('/loginUsuario', (req, res) => {
+//ROTA POST - Cadastro de novos usuarios.
+app.post('/cadastrarUsuario', (req, res) => { 
   const { nomeUsuario, senhaUsuario } = req.body;
 
   if (!nomeUsuario || !senhaUsuario) {
     return res.status(400).json({ error: 'Nome ou senha não inseridos.' });
   }
 
-  const sql = 'SELECT * FROM Memora WHERE nomeUsuario = ? AND SenhaUsuario = ?';
-  db.query(sql, [nomeUsuario, senhaUsuario], (err, results) => {
+  const sql = 'INSERT INTO cadastro (nomeUsuario, senhaUsuario) VALUES (?, ?)';
+  db.query(sql, [nomeUsuario, senhaUsuario], (err, result) => {
     if (err) {
+      if (err.code === 'ER_DUP_ENTRY') {
+        return res.status(409).json({ error: 'O usuário já está cadastrado' });
+      }
       return res.status(500).json({ error: err.message });
     }
 
-    if (results.length === 0) {
-      return res.status(401).json({ error: 'Dados inválidos.' }); // nao encontrou no Banco de Dados.
-    }
-
-    //Login bem-sucedido.
-    const user = results[0];
-    res.json({
-      message: 'Login bem-sucedido!',
-      user: {
-        id: user.id,
-        nomeUsuario: user.nomeUsuario,
-        senhaUsuario: user.senhaUsuario
-      }
-    });
+    res.status(201).json({ message: 'Usuário registrado com sucesso'});
   });
 });
 
