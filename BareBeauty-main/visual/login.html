@@ -24,7 +24,7 @@
                 margin-bottom: px;
                 margin-top: 25px;
             }
-            button{
+            .loginBotao{
                 margin-bottom: 34px;
                 margin-top: 25px;
             }
@@ -52,9 +52,65 @@
                 <label for="senhaUsuario" style="font-size: 180%; color: #4B3E3E; font-family: j;">senha:</label><br>
                 <input type="text" id="senhaUsuario" step="0.01" required><br>
 
-                <button type="submit" style="color: #522586; font-size: 130%; font-family: m;">Entrar</button>
+                <button class="loginBotao" type="submit" style="color: #522586; font-size: 130%; font-family: m;">Entrar</button>
         </div>
         <a href="cadastro.html"><center><p>Não possui uma conta?<br>Clique aqui!</p></center></a>
+        <script>
+            const form = document.getElementById("idCadastro");
+    
+            async function loginUsuario(nomeUsuario, senhaUsuario) {
+                try {
+                    // Seleciona a rota a ser usada
+                    const resposta = await fetch('http://localhost:3000/loginUsuario', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    // Encaminha os dados que vieram como parametro no corpo do arquivo JSON
+                    body: JSON.stringify({
+                        nomeUsuario: nomeUsuario,
+                        senhaUsuario: senhaUsuario
+                    })
+                    });
 
+                    // A variável dados recebe um objeto produto
+                    const dados = await resposta.json();
+
+                    if (resposta.ok) {
+                        console.log("Login efetuado com sucesso!")
+                        window.location.replace("pagina_inicial.html")
+                    } else {
+                        switch (resposta.status) {
+                        case 400:
+                            console.warn('⚠️ Conta não encontrada');
+                            break;
+                        case 401:
+                            console.warn('⚠️ Conta não encontrada');
+                            break;
+                        case 500:
+                            console.warn('💥 Erro interno no servidor. Tente novamente mais tarde.');
+                            break;
+                        default:
+                            console.warn(`❗ Erro inesperado: ${resposta.status}`);
+                        }
+
+                        console.debug('Detalhes do erro:', dados.mensagem || dados);
+                    }
+                } 
+                catch (erro) {
+                    console.error('🚫 Erro ao tentar buscar o cadastro:', erro.message);
+                }
+            }
+
+            form.addEventListener("submit", function(event) {
+            event.preventDefault(); // impede o reload da página
+
+            const nome = document.getElementById("nomeUsuario").value;
+            const senha = parseFloat(document.getElementById("senhaUsuario").value);
+
+            // cadastra o produto no banco de dados
+            loginUsuario(nome, senha);
+            });
+        </script>
     </body>
 </html>

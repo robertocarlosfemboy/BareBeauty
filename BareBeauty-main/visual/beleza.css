@@ -3,26 +3,30 @@ body{
     background-image: linear-gradient(to bottom, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #FAFAFA, #d0d0d0);
     background-repeat: repeat;
     background-blend-mode: overlay;
+    background-attachment:fixed;
     color: #4B3E3E;
 }
 h1, h2, h3, h4, h5{
     font-family: "m";
 }
 article{
-    display: flex;                /* ativa o flexbox */
+    display: flex;
     margin-top: 0.010%;
-    /*justify-content: 500%;       centraliza horizontalmente */
-    margin-left: 40%;
+    margin-left: 37%;
+    position: fixed;
+    
+
 }
 nav{
     display: flex;
     padding: 8px;
     border-radius: 50px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.384);
 }
 input{
     padding: 8px;
     border: none;
+    border-radius: 50px;
     outline: none;
     width: 550px;
     font-family: "j"
@@ -62,11 +66,11 @@ a{
 .quadradoOpcoes{
     text-align: top;
     margin-left: 0%;
-    width: 13%;
+    width: 14%;
     position: fixed;
-    height: 79%;
-    top: 0;
-    bottom: 0;
+    height: 69%;
+    top: 3%;
+    bottom: 0%;
     border-radius: 15px;
     background-color: #E3CBFF;
 
@@ -80,10 +84,10 @@ a{
     aspect-ratio: 16 / 9; /* Opcional: para manter a proporção se a imagem for um exemplo */
 }
 footer{
-    width: 13%;
+    width: 14%;
     position: fixed;
     background-color: #FFEEBC;
-    bottom: 0;
+    bottom: 3%;
     border-radius: 15px;
 }
 @font-face{

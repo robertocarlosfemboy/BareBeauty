@@ -5,6 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BareBeauty - Perfil</title>
         <link rel="stylesheet" href="beleza.css">
+        <style>
+            .quadradoPerfil{
+                text-align: center;
+                margin-top: 5%;
+                margin-left: 43%;   
+                margin-right: 28%;
+                padding: 1%;
+                border-radius: 15px;
+                background-color: #E3CBFF;
+            }
+            .inputDois{
+                padding: 8px;
+                width: 300px;
+                font-family: "j"
+            }
+            label{
+                display: block;
+                margin-bottom: px;
+                margin-top: 25px;
+            }
+            .perfilBotao{
+                color: #4B3E3E;
+                border: none;
+                font-family: "m";
+                margin-bottom: 34px;
+                margin-top: 25px;
+            }
+            @font-face{
+                font-family: "m";
+                src: url('fontes/Marcellus/Marcellus-Regular.ttf') format('truetype');
+            }
+            @font-face{
+                font-family: "j";
+                src: url('fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+            }
+        </style>
     </head>
     <body>
         <div class="corpo">
@@ -17,6 +53,26 @@
                     <button>Buscar</button>
                 </nav>
             </article>
+
+            <section class="quadradoPerfil">
+            <form id="idPerfil">
+                <h1 style="color: #fafafa; font-size: 310%; font-family: m;">Perfil</h1>
+                <img src="imagens/perfil.jpg" alt="...">
+                <label for="nomeUsuario" style="font-size: 150%; color: #4B3E3E; font-family: j;">nome:</label><br>
+                <input class="inputDois" type="text" id="nomeUsuario" required><br>
+
+                <label for="idadeUsuario" style="font-size: 150%; color: #4B3E3E; font-family: j;">idade:</label><br>
+                <input class="inputDois" type="text" id="idadeUsuario" step="0.01" required><br>
+
+                <label for="nascimentoUsuario" style="font-size: 150%; color: #4B3E3E; font-family: j;">data de nascimento:</label><br>
+                <input class="inputDois" type="text" id="nascimentoUsuario" step="0.01" required><br>
+
+                <label for="emailUsuario" style="font-size: 150%; color: #4B3E3E; font-family: j;">e-mail:</label><br>
+                <input class="inputDois" type="text" id="emailUsuario" step="0.01" required><br> 
+
+                <button class="perfilBotao" type="submit" style="color: #4B3E3E; font-size: 160%;">salvar</button>
+            </section>
+
             <div class="quadradoOpcoes">
                 <div class="menu">
                     <img src="imagens/BareBeauty.jpg" alt="logo BareBeauty" class="logoBareBeauty">
@@ -41,3 +97,28 @@
         </div>
     </body>
 </html>
+<!--
+
+html
+<div class="container-hover">
+    <img src="Imagens/33.jpg" alt="">
+    <div class="texto-oculto">
+        Mangá
+    </div>
+</div>
+
+css
+.container-hover {
+    position: relative; /* Importante para posicionar o texto oculto dentro */
+    display: inline-block; /* Para o contêiner se ajustar ao conteúdo */
+    padding: 10px;
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+.texto-oculto {
+    display: none; /* O texto fica oculto por padrão */
+    position: absolute; /* Posiciona o texto sobre o contêiner */
+    background-color: #60110f;
+    padding: 5px;
+}
+
+-->
